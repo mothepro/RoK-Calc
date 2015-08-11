@@ -7,7 +7,7 @@ for(item in materials) {
 	var li = $('<li>')
 		.append(
 			$('<label>')
-				.text( niceName( itemName ) )// no camelcase
+				.text( item )// no camelcase
 				.append(
 				$('<input>')
 					.attr('type', 'number')
