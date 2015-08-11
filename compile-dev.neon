@@ -26,12 +26,12 @@ upload:
 #	img:
 #		- img
 #	font: font
-	data: materials.json
+#	data: www/materials.json
 
 # Where to save new static content
 download:
 #	sass:	s1.parkshade.com/rok/css
 	js:		/web/rok/www/js
-	data:		/web/rok/www/js
+#	data:		/web/rok/www
 #	img:	i1.parkshade.com/rok
 #	font:	s1.parkshade.com/rok/font

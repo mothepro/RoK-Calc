@@ -1,0 +1,9 @@
+wood: 1
+iron: 1
+lumber:
+	wood: .2
+ironIngot
+	iron: 10
+refinedWood:
+	lumber: 100
+	ironIngot: 1
