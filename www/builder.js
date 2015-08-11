@@ -6,6 +6,7 @@ $.getJSON('materials.json').success(function(materials){
 		/**
 		 * From camelCase to Normal Case
 		 * @link http://phpjs.org/functions/ucwords/
+		 * @link http://jamesroberts.name/blog/2010/02/22/string-functions-for-javascript-trim-to-camel-case-to-dashed-and-to-underscore/
 		 * @type @exp;item@call;replace
 		 */
 		var itemName = item.replace(/([A-Z])/g, function($1) { // camelCase -> normal Case
