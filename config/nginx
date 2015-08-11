@@ -1,0 +1,40 @@
+server {
+	# Must have's
+	listen  80;
+	charset utf-8;
+
+	# Domain Name
+	server_name             local-rok.com;
+
+	# Logs
+	access_log      /var/log/nginx/rok.access.log;
+	error_log       /var/log/nginx/rok.error.log;
+
+	# Main files
+	root    /web/rok/www;
+	index   index.html;
+
+	# compress (save bandwidth)
+	gzip on;
+
+	# Block hidden
+	location ~/\. {
+		deny all;
+	}
+
+	location = /favicon.ico {
+		return  204;
+	}
+
+	# Larger Static files
+	location /data {
+		autoindex on;
+		root /web/rok;
+	}
+
+	# Overloaded
+	error_page 502 503 504  /50x.html;
+
+	# No Page Found
+	error_page 403 404              /404.html;
+}
