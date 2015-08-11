@@ -1,0 +1,14 @@
+{
+    "name": "mothepro/rok-calc",
+    "description": "A Reign of Kings Calculator to find the value of certain items",
+    "authors": [
+        {
+            "name": "Maurice Prosper",
+            "email": "maurice.prosper@ttu.edu"
+        }
+    ],
+    "require-dev": {
+		"mothepro/mo-compiler": "dev-master",
+		"nette/neon": "*"
+	}
+}
