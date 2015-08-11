@@ -14,7 +14,7 @@ for(item in materials) {
 					.attr('data-item', item)
 					.addClass('col-black')
 					.addClass('spent')
-					.val('fff0')
+//					.attr('value', 0)
 				).append(
 					$('<span>')
 						.addClass('spent')
