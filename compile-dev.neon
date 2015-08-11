@@ -15,7 +15,7 @@ project:
 		- composer.json
 
 # Compress
-compress: yes
+compress: no
 
 # Local static content locations
 upload:
@@ -35,3 +35,13 @@ download:
 #	data:		/web/rok/www
 #	img:	i1.parkshade.com/rok
 #	font:	s1.parkshade.com/rok/font
+
+
+# Hooks for more binaries!
+hooks:
+	local:
+		pre:
+			- php bin\make_materials.php -i materials.neon -o js\rok\_materials.js
+	remote:
+		post:
+			#- composer update --no-dev -d /web/test # -o # [optimize autoloader]
