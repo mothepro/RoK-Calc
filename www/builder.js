@@ -3,10 +3,21 @@ $.getJSON('materials.json').success(function(materials){
 	var ul = $('<ul>').addClass('materials').attr('id', 'list');
 
 	for(item in materials) {
+		/**
+		 * From camelCase to Normal Case
+		 * @link http://phpjs.org/functions/ucwords/
+		 * @type @exp;item@call;replace
+		 */
+		var itemName = item.replace(/([A-Z])/g, function($1) { // camelCase -> normal Case
+			return " " + $1
+		}).replace(/^([a-z\u00E0-\u00FC])|\s+([a-z\u00E0-\u00FC])/g, function($1) { // normal Case -> Normal Case
+			return $1.toUpperCase();
+		});
+		
 		var li = $('<li>')
 			.append(
 				$('<label>')
-					.text(item)
+					.text( itemName ) // no camelcase
 					.append(
 					$('<input>')
 						.attr('type', 'number')
