@@ -28,7 +28,7 @@ $.getJSON('materials.json').success(function(materials){
 
 	// data has changed
 	$('input').on('keyup keypress blur change', function () {
-		var cost = 0;
+		var cost = 0, left;
 
 		// get the cost
 		$('#list input').each(function() {
@@ -39,29 +39,30 @@ $.getJSON('materials.json').success(function(materials){
 					materials
 				);
 		
-			$(this).next('.spent').text( price );
+			$(this).next('.spent').text( numeral(price).format('0,0') );
 		
 			cost += price;
 		});
 		
-		$('#left').text( $('#cash').val() - cost );
+		left = $('#cash').val() - cost;
+		$('#left').text( numeral(left).format('0,0') );
 	});
+});
 
-	// recursive function to get price
-	function grab(name, quantity, build_per) {
+// recursive function to get price
+	function grab(name, quantity, build_per, data) {
 		var ret = 0;
 
-		if(typeof materials[name] === "number") {
-			ret = materials[name];
+		if(typeof data[name] === "number") {
+			ret = data[name];
 		}
 
-		else if(typeof materials[name] === "object") {
-			for(var k in materials[name])
-				ret += grab(k, materials[name][k], build_per, materials);
+		else if(typeof data[name] === "object") {
+			for(var k in data[name])
+				ret += grab(k, data[name][k], build_per, data);
 			ret *= build_per;
 //			ret += build_num;
 		}
 
 		return quantity * ret;
 	}
-});
