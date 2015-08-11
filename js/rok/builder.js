@@ -51,13 +51,13 @@ $.getJSON('materials.json').success(function(materials){
 					materials
 				);
 		
-			$(this).next('.spent').text( numeral(price).format('0,0') );
+			$(this).next('.spent').text( numeral(Math.ceil(price)).format('0,0') );
 		
 			cost += price;
 		});
 		
 		left = $('#cash').val() - cost;
-		$('#left').text( numeral(left).format('0,0') );
+		$('#left').text( numeral(Math.ceil(left)).format('0,0') );
 	});
 });
 
