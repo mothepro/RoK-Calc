@@ -1,0 +1,37 @@
+# Compiler Configuration
+# hostname
+host:	parkshade.com
+
+# PPK to use
+ppk:	C:\Users\Mo\.ssh\tower.ppk
+
+# Remote Project Dir
+project:
+	remote:	/web/rok
+
+	# Local folder's or files to copy
+	files:
+		- www
+		- composer.json
+
+# Compress
+compress: yes
+
+# Local static content locations
+upload:
+#	sass:
+#		- css
+	js:
+		- js
+#	img:
+#		- img
+#	font: font
+	data: materials.json
+
+# Where to save new static content
+download:
+#	sass:	s1.parkshade.com/rok/css
+	js:		/web/rok/www/js
+	data:		/web/rok/www/js
+#	img:	i1.parkshade.com/rok
+#	font:	s1.parkshade.com/rok/font
