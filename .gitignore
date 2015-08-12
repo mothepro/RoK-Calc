@@ -3,3 +3,4 @@
 composer.lock
 .gitattributes
 _materials.js
+/.sass-cache/
