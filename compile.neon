@@ -1,0 +1,43 @@
+##########################
+# Compiler Configuration #
+##########################
+
+# hostname
+host:	parkshade.com
+
+# PPK to use
+ppk:	C:\Users\Mo\.ssh\tower.ppk
+
+compress: no
+verbose: 3
+
+# Remote Project Dir
+project:
+	remote:	/web/rok
+
+	# Local folder's or files to copy
+	files:
+		- www
+
+
+# Local static content locations
+upload:
+	sass:
+		- css
+	js:
+		- js
+	font: font
+
+# Where to save new static content
+download:
+	sass:	/web/rok/www/css
+	js:		/web/rok/www/js
+	font:	/web/rok/www/font
+
+
+# Hooks for more binaries!
+hooks:
+	Processing JS:
+		pre:
+			local:
+				- php bin\make_materials.php -i materials.neon -o js\rok\_materials.js
