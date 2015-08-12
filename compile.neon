@@ -8,7 +8,7 @@ host:	parkshade.com
 # PPK to use
 ppk:	C:\Users\Mo\.ssh\tower.ppk
 
-compress: no
+compress: yes
 verbose: 3
 
 # Remote Project Dir
@@ -30,10 +30,9 @@ upload:
 
 # Where to save new static content
 download:
-	sass:	/web/rok/www/css
-	js:		/web/rok/www/js
-	font:	/web/rok/www/font
-
+	sass:	s1.parkshade.com/rok/css
+	js:		s1.parkshade.com/rok/js
+	font:	s1.parkshade.com/rok/font
 
 # Hooks for more binaries!
 hooks:
@@ -41,3 +40,7 @@ hooks:
 		pre:
 			local:
 				- php bin\make_materials.php -i materials.neon -o js\rok\_materials.js
+
+constants:
+	+url:
+		font: //s1.parkshade.com/rok/font/ # only one needed in JS & SASS
