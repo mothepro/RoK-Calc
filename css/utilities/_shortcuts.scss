@@ -1,0 +1,35 @@
+$shortcuts: (
+	m:	'margin',
+	mb:	'margin-bottom',
+	mt: 'margin-top',
+	mr: 'margin-right',
+	ml: 'margin-left',
+	
+	p: 	'padding',
+	pt: 'padding-top',
+	pr: 'padding-right',
+	pb: 'padding-bottom',
+	pl: 'padding-left',
+	
+	he: 'height',
+	w:  'width',
+);
+
+@each $short, $full in $shortcuts {
+	.#{$short} {
+		#{$full}: 1em !important;
+	}
+	
+	@for $i from 0 through 6 {
+		.#{$short}#{$i} {
+			#{$full}: #{$i}em !important;
+		}
+	}
+
+	// inversion
+	@for $i from 1 through 6 {
+		.#{$short}1_#{$i} {
+			#{$full}: #{1/$i}em !important;
+		}
+	}
+}

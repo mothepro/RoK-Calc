@@ -1,0 +1,30 @@
+// block styles
+.rel {		position: relative }
+.ib {		display: inline-block }
+.block {	display: block }
+.inline {	display: inline }
+
+// text alignment
+.tcenter { 	text-align: center }
+.tleft { 	text-align: left }
+.tright { 	text-align: right }
+.tjust { 	text-align: justify }
+
+// floater
+.fleft { 	float: left }
+.fright { 	float: right }
+
+// text sizes
+.small { 	font-size: $font-size-small }
+.large { 	font-size: $font-size-large }
+.small, .large { line-height: $line-height-base }
+
+// text styles
+.bold { 	font-weight: bold; }
+.italic { 	font-weight: italic; }
+
+// sizes
+.full {		width: 100%; }
+
+// misc
+.vmid {		vertical-align: middle; }
