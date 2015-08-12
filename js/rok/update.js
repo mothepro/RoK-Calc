@@ -16,7 +16,7 @@ $('body').on('keyup keypress blur change', 'input', function () {
 			bell = $('span[data-item="'+ item +'"]');
 
 		// value spent of certain material
-		if($(this).val())
+		if($(this).val().match(/^[0-9]+$/))
 			bell
 				.removeClass('hide')
 				.text( numeral(Math.ceil(price)).format('0,0') );
