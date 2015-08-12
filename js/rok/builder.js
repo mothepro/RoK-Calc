@@ -1,27 +1,32 @@
 /**
  * Create the DOM elements used in operation
  */
-var ul = $('<ul>').addClass('materials').attr('id', 'list');
+$(function(){
+	// fragment
+	var ul = $('<div>');
 
-for(item in materials) {
-	var li = $('<li>')
-		.append(
-			$('<label>')
-				.text( item )// no camelcase
-				.append(
+	for(item in materials) {
+		var li = $('<div>')
+			.addClass('row')
+			.append(
 				$('<input>')
 					.attr('type', 'number')
+					.attr('min', 0)
+					.attr('step', 1)
 					.attr('data-item', item)
-					.addClass('col-black')
-					.addClass('spent')
-//					.attr('value', 0)
+					.attr('required', true)
 				).append(
-					$('<span>')
-						.addClass('spent')
-						.text(0)
-		));
+					$('<label>')
+						.text( item )
+						.append(
+							$('<span>')
+								.addClass('spent')
+								.addClass('hide')
+								.attr('data-item', item)
+			));
 
-	ul.append(li);
-}
+		ul.append(li);
+	}
 
-$('#list').html( ul.html() );
+	$('.materials').html( ul.html() );
+});
