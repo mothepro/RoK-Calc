@@ -12,15 +12,15 @@ Water:		1
 Flax:		1
 Oil:		1
 
-lumber:
-	wood: .2
+Lumber:
+	Wood: .2
 
-ironIngot:
-	iron: 10
+Iron Ingot:
+	Iron: 10
 	
 ##########
 # Blocks #
 ##########
-Refined Wood Block:
-	lumber: 100
-	ironIngot: 1
+Renforced Wood Block:
+	Lumber: 100
+	Iron Ingot: 1
