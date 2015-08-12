@@ -42,15 +42,25 @@
 		<br>
 		Points Left <span id="left" class="total spent"></span><br>
 		<br>
-		<div class="row">
-			<input id="cash" type="number" value="2000">
-			<label>Points to Spend</label>
+		<div class="materials mt1">
+			<div class="row">
+				<input id="cash" type="number" value="2000">
+				<label>Points to Spend</label>
+			</div>
+			<div class="row">
+				<input id="build_per" type="number" value="25">
+				<label>Build cost Percentage</label>
+			</div>
+			<?php foreach($neon as $name => $tmp): ?>
+				<div class="row">
+					<input type="number" min="0" step="1" data-item="<?php echo $name; ?>" required="required">
+					<label>
+						<?php echo $name; ?>
+						<span class="spent hide" data-item="<?php echo $name; ?>"></span>
+					</label>
+				</div>
+			<?php endforeach; ?>
 		</div>
-		<div class="row">
-			<input id="build_per" type="number" value="25">
-			<label>Build cost Percentage</label>
-		</div>
-		<div class="materials mt1"></div>
 	</div>
 
 	<script defer type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

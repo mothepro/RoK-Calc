@@ -40,6 +40,16 @@ hooks:
 		pre:
 			local:
 				- php bin\make_materials.php -i materials.neon -o js\rok\_materials.js
+	Uploading Project:
+		pre:
+			local:
+				- php bin\make_index.php -i materials.neon -p index.php -o www\index.html
+		post:
+			# Remove auto generated files
+			local:
+				- del js\rok\_materials.js
+				- del www\index.html
+				- rmdir www\
 
 constants:
 	+url:
