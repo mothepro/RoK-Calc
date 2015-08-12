@@ -1,7 +1,7 @@
 /**
  * data has changed
  */ 
-$('body').on('keyup keypress blur change', 'input', function () {
+$('body').on('keyup keypress blur change ready', 'input', function () {
 	var cost = 0, left;
 
 	// get the cost of each material
