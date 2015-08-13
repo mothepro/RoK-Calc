@@ -37,29 +37,33 @@
 /___/  /___/________/___/  /___/________/
 -->
 <body>
-	<div class="container">
-		<h1 class="signature purple mb1 ib animated zoomIn">Reign of Kings Calculator</h1>
-		<br>
-		Points Left <span id="left" class="total spent"></span><br>
-		<br>
-		<div class="materials mt1">
-			<div class="row">
-				<input id="cash" type="number" value="2000">
-				<label>Points to Spend</label>
+	<div class="container tcenter mb1">
+		<h1 class="signature mb1">Reign of Kings Calculator</h1>
+		<div class="row">
+			<div class="col-sm-1 points-left">
+				<span id="left"></span>
+				Points Remaining
+				<i class="fa fa-check"></i>
 			</div>
-			<div class="row">
-				<input id="build_per" type="number" value="25">
-				<label>Build cost Percentage</label>
-			</div>
-			<?php foreach($neon as $name => $tmp): ?>
-				<div class="row">
-					<input type="number" min="0" step="1" data-item="<?php echo $name; ?>" required="required">
-					<label>
-						<?php echo $name; ?>
-						<span class="spent hide" data-item="<?php echo $name; ?>"></span>
-					</label>
+			<div class="col-sm-offset-1 col-sm-11 group rel">
+				<div class="item">
+					<input id="cash" type="number" value="2000" min="0" step="1" required="required">
+					<label>Total Points</label>
 				</div>
-			<?php endforeach; ?>
+				<div class="item">
+					<input id="build_per" type="number" value="25" min="0" step="1" required="required">
+					<label>Build Cost Percentage</label>
+				</div>
+				<?php foreach($neon as $name => $tmp): ?>
+					<div class="item material">
+						<input type="number" min="0" step="1" data-item="<?php echo $name; ?>" required="required">
+						<label>
+							<?php echo $name; ?>
+							<span class="spent hide" data-item="<?php echo $name; ?>"></span>
+						</label>
+					</div>
+				<?php endforeach; ?>
+			</div>
 		</div>
 	</div>
 

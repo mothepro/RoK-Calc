@@ -1,11 +1,11 @@
 /**
  * data has changed
  */ 
-$('body').on('keyup keypress blur change ready', 'input', function () {
+var update = function () {
 	var cost = 0, left;
 
 	// get the cost of each material
-	$('.materials input').each(function() {
+	$('.material input').each(function() {
 		var item = $(this).attr('data-item'),
 			price = grab(
 				item,
@@ -31,4 +31,18 @@ $('body').on('keyup keypress blur change ready', 'input', function () {
 	left = $('#cash').val() - cost;
 	
 	$('#left').text( numeral(Math.ceil(left)).format('0,0') );
-});
+	
+	// display
+	$('.points-left').toggleClass(function() {
+		return 'fg-' + (left >= 0 ? 'success' : 'danger');
+	}).addClass('fg-success');
+		
+	if(left >= 0) {
+	} else {
+//				$('.points-left').addClass('fg-warning');
+	}
+};
+
+// when to update lines
+$('input').on('keyup keypress blur change ready', update);
+$(document).ready(update);

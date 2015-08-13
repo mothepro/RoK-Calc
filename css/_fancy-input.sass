@@ -5,52 +5,31 @@
 .transition
 	@include transition( all 0.25s cubic-bezier(.53,.01,.35,1.5))
 
-.materials
-	position: relative
-	display: inline-block
+.group
 	max-width: 700px
-	min-width: 500px
-	box-sizing: border-box
-	padding: 30px 25px
-	// background-color: $body-bg
-	border-radius: 40px
-	margin: 40px 0
-	left: 50%
-	@include translateX( -50% )
+	text-align: initial
+	font-size: 17px
 		
-	h1
-		color: $brand-primary
-		font-weight: 100
-		letter-spacing: 0.01em
-		margin-left: 15px
-		margin-bottom: 35px
-		text-transform: uppercase
-		
-	.row
+	.item
 		position: relative
-		padding: 1em 0
+		padding-top: 1.5em
 		
 		&:first-of-type
 			padding-top: 0
 			
-		&:last-of-type
-			padding-bottom: 0
-			
 		label
 			@extend .transition
 			transform-origin: left center
-			color: $brand-primary
+
+			color: $text-color
+			padding: 0.588em 0.882em
 			font-weight: 100
-			letter-spacing: 0.01em
-			font-size: 17px
-			box-sizing: border-box
-			padding: 10px 15px
 			display: block
 			position: absolute
+			width: 100%
 			margin-top: -40px
 			z-index: 2
 			pointer-events: none
-			width: 100%
 
 			span
 				float: right
@@ -58,29 +37,24 @@
 		input[type="number"]
 			@extend .transition
 			appearance: none
-			background-color: none
-			border: 1px solid $brand-primary
+			background-color: transparent
+			color: transparent
+			border: thin solid $text-color
 			line-height: 0
-			font-size: 17px
 			width: 100%
 			display: block
-			box-sizing: border-box
-			padding: 10px 15px
-			font-weight: 100
-			letter-spacing: 0.01em
-			position: relative
+			padding: 0.588em 0.882em
 			z-index: 1
-			color: transparent
 			
 			&:focus
 				outline: none
-				background: $brand-primary
+				background: $text-color
 				color: $body-bg !important
 				margin-top: 30px
 				
 			&:valid
 				margin-top: 30px
-				color: $brand-primary
+				color: $text-color
 					
 			&:focus ~ label
 				@include translate( 0 , -35px )
@@ -88,7 +62,13 @@
 			&:valid ~ label
 				text-transform: uppercase
 				font-style: italic
-				font-size: .6em
+				font-size: .8em
 				padding-left: 15px
 				padding-right: 15px
 				@include translateY(-35px)
+
+.fg-success
+	color: $brand-success
+
+.fg-danger
+	color: $brand-danger

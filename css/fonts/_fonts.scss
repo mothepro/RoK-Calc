@@ -2,6 +2,8 @@
 // Font Awesome //
 //////////////////
 
+$fa-font-path: str-slice($const-url-font, 1, -2); // trim trailing /
+
 @import "font-awesome/variables";
 @import "font-awesome/mixins";
 @import "font-awesome/path";
@@ -10,7 +12,7 @@
 @import "font-awesome/fixed-width";
 @import "font-awesome/list";
 @import "font-awesome/bordered-pulled";
-@import "font-awesome/spinning";
+@import "font-awesome/animated";
 @import "font-awesome/rotated-flipped";
 @import "font-awesome/stacked";
 @import "font-awesome/icons";
