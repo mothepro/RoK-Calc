@@ -40,10 +40,9 @@
 	<div class="container tcenter mb1">
 		<h1 class="signature mb1">Reign of Kings Calculator</h1>
 		<div class="row">
-			<div class="col-sm-1 points-left">
+			<div class="col-sm-1 remain">
 				<span id="left"></span>
 				Points Remaining
-				<i class="fa fa-check"></i>
 			</div>
 			<div class="col-sm-offset-1 col-sm-11 group rel">
 				<div class="item">

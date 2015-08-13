@@ -38,8 +38,13 @@ var update = function () {
 	}).addClass('fg-success');
 		
 	if(left >= 0) {
+		$('.remain')
+				.addClass('fg-success')
+				.removeClass('fg-danger');
 	} else {
-//				$('.points-left').addClass('fg-warning');
+		$('.remain')
+				.removeClass('fg-success')
+				.addClass('fg-danger');
 	}
 };
 
