@@ -27,7 +27,7 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               hsl(207, 58%, 96%) !default;
+$body-bg:               white !default; // hsl(207, 58%, 96%)
 //** Global text color on `<body>`.
 $text-color:            hsl(208, 56%, 53%) !default;
 

@@ -23,5 +23,6 @@ $fa-font-path: str-slice($const-url-font, 1, -2); // trim trailing /
 
 @font-face {
 	font-family: Sansation Light;
+	font-weight: 100;
 	src: url(#{$const-url-font}SansationLight.woff);
 }
