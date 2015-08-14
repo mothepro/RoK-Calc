@@ -6,7 +6,6 @@
 	@include transition( all 0.25s cubic-bezier(.53,.01,.35,1.5))
 
 .group
-	// max-width: 700px
 	text-align: initial
 	font-size: 17px
 		
@@ -38,7 +37,7 @@
 			@extend .transition
 			appearance: none
 			background-color: transparent
-			color: transparent
+			// color: transparent
 			border: thin solid $text-color
 			line-height: 0
 			width: 100%
@@ -66,9 +65,3 @@
 				padding-left: 15px
 				padding-right: 15px
 				@include translateY(-35px)
-
-.fg-success
-	color: $brand-success
-
-.fg-danger
-	color: $brand-danger

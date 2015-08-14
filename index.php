@@ -61,7 +61,7 @@
 				<?php endforeach; ?>
 			</div>
 		</div>
-		Made with <i class="fa fa-heart"></i> by <a href="http://mauriceprosper.com">Maurice Prosper</a> on <a href="https://github.com/mothepro/RoK-Calc"><i class="fa fa-github"></i></a>.
+		Made with <i class="fa fa-heart"></i> by <a href="http://mauriceprosper.com">Maurice Prosper</a> on <a href="https://github.com/mothepro/RoK-Calc"><i class="fa fa-github-alt"></i></a>.
 	</div>
 
 	<script defer type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
