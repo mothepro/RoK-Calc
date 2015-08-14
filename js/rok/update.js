@@ -30,21 +30,23 @@ var update = function () {
 	// total value left
 	left = $('#cash').val() - cost;
 	
-	$('#left').text( numeral(Math.ceil(left)).format('0,0') );
+	$('.status .remain').text( numeral(Math.ceil(left)).format('0,0') );
 	
 	// display
-	$('.points-left').toggleClass(function() {
-		return 'fg-' + (left >= 0 ? 'success' : 'danger');
-	}).addClass('fg-success');
-		
 	if(left >= 0) {
-		$('.remain')
-				.addClass('fg-success')
-				.removeClass('fg-danger');
+		$('.status')
+				.addClass('text-success')
+				.removeClass('text-danger');
+		$('.status i')
+				.addClass('fa-check')
+				.removeClass('fa-times');
 	} else {
-		$('.remain')
-				.removeClass('fg-success')
-				.addClass('fg-danger');
+		$('.status')
+				.removeClass('text-success')
+				.addClass('text-danger');
+		$('.status i')
+				.removeClass('fa-check')
+				.addClass('fa-times');
 	}
 };
 
